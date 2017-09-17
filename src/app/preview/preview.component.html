@@ -1,0 +1,22 @@
+
+<div class="pic-preview" *ngIf="show">
+    <div class="bg" (click)="killPreview()"></div>
+    <div class="outline">
+        <div class="img-wrapper">
+            <a class="close" href="javascript:void(0);"
+                (click)="killPreview()">
+                <img src="/assets/imgs/close.png" alt="">
+            </a>
+            <img [src]="data.src" [alt]="data.desc" class="pic">
+        </div>
+    </div>
+    <p class="desc">{{data.desc}}</p>
+    <div class="prev btn-wrap"
+        (click)="prev()">
+        <img src="/assets/imgs/prev.png" alt="" class="btn">
+    </div>
+    <div class="next btn-wrap"
+        (click)="next()">
+        <img src="/assets/imgs/next.png" alt="" class="btn">
+    </div>
+</div>

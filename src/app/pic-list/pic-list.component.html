@@ -1,6 +1,15 @@
-<div class="app-pic-list">
-    <div class="pic-item"
-        *ngFor="let item of list" >
-        <pic-item [data]="item"></pic-item>
+<div class="app-pic-list"
+    [style.overflow]="showPreview?'hidden':'auto'"
+    [style.height.px]="winHeight">
+    <div class="list-wrapper">
+        <div class="pic-item"
+            *ngFor="let item of list"
+            (click)="previewPic(item)">
+            <pic-item [data]="item"></pic-item>
+        </div>
     </div>
+    <pic-preview [data]="curItem"
+        [(show)]="showPreview"
+        (onPrev)="goPrev($event)"
+        (onNext)="goNext($event)"></pic-preview>
 </div>
