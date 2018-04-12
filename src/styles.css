@@ -6,3 +6,64 @@ body, html {
     padding: 0;
     margin: 0;
 }
+#btry-loader {
+    background: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    z-index: 9999;
+}
+#btry-loader .btry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 40px;
+    margin: -10px 0 0 -20px;
+    border: 1px solid #23d1b7;
+    border-radius: 3px;
+}
+#btry-loader .btry:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -3px;
+    height: 2px;
+    width: 8px;
+    background: #23d1b7;
+    border-radius: 0 2px 20x 0;
+    left: 5px;
+}
+#btry-loader .btry .btry-charge {
+    position: absolute;
+    z-index: 100;
+    height: 16px;
+    width: 16px;
+    bottom: 1px;
+    left: 1px;
+    background: #23d1b7;
+    border-radius: 1px;
+    -webkit-animation: red-btry 2s linear 0s infinite;
+    -moz-animation: red-btry 2s linear 0s infinite;
+    animation: red-btry 2s linear 0s infinite;
+}
+@-webkit-keyframes red-btry {
+    0% {
+        height: 20px;
+    }
+    100% {
+        height: 36px;
+    }
+}
+@keyframes red-btry {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 36px;
+    }
+}

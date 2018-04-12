@@ -9,7 +9,4 @@ import { PicData } from './pic.model';
 export class PicComponent {
     @Input()
     data: PicData;
-
-    constructor() {}
-
 }

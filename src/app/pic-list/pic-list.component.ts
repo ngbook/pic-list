@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PicData } from '../pic/pic.model';
 import { dataList } from '../data';
 
@@ -6,6 +6,7 @@ import { dataList } from '../data';
   selector: 'pic-list',
   templateUrl: './pic-list.component.html',
   styleUrls: ['./pic-list.component.scss']
+//   encapsulation: ViewEncapsulation.None
 })
 export class PicListComponent implements OnInit {
     list: PicData[];
